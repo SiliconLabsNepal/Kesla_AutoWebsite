@@ -1,0 +1,8 @@
+node_modules/
+.env
+AGENTS.md
+CLAUDE.md
+DESIGN.md
+implementation_plan.md
+backend/.env
+.next/

@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+:root {
+  /* Design System: Kesla Auto — Steel Blue Chrome (Light Theme) */
+  /* Derived from logo: Deep navy, steel blue, chrome silver, cyan glow */
+
+  /* Backgrounds — Clean whites and soft blue-grays */
+  --background: #F8FAFB;
+  --surface: #FFFFFF;
+  --surface-container-lowest: #FFFFFF;
+  --surface-container-low: #F2F5F8;
+  --surface-container: #ECF0F4;
+  --surface-container-high: #E4E9EF;
+  --surface-container-highest: #D8DFE8;
+  --surface-bright: #FFFFFF;
+  --surface-variant: #E0E7EF;
+
+  /* Primary — Steel Blue from logo center */
+  --primary: #2B6EA8;
+  --primary-container: #D4E8F8;
+  --primary-dim: #1F5B8F;
+  --on-primary: #FFFFFF;
+  --on-primary-container: #0D3B66;
+
+  /* Secondary — Chrome Silver / Slate tones */
+  --secondary: #4A5768;
+  --secondary-container: #D8DEE8;
+  --on-secondary: #FFFFFF;
+  --on-secondary-container: #1A2535;
+
+  /* Accent — Cyan glow ring from logo */
+  --accent-glow: #3D9AD6;
+
+  /* Text */
+  --on-background: #0D1B2A;
+  --on-surface: #0D1B2A;
+  --on-surface-variant: #44556A;
+  --outline: #7A8A9C;
+  --outline-variant: #C4CDD8;
+
+  /* Error */
+  --error: #BA1A1A;
+
+  /* Typography */
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-manrope);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-variant: var(--surface-variant);
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-primary-dim: var(--primary-dim);
+  --color-on-primary: var(--on-primary);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary: var(--on-secondary);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-accent-glow: var(--accent-glow);
+  --color-on-background: var(--on-background);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-error: var(--error);
+
+  /* Dark surface for hero/footer sections that need dark bg */
+  --color-dark-surface: #0D1B2A;
+  --color-dark-surface-container: #122337;
+  --color-dark-on-surface: #E8EDF4;
+
+  --font-sans: var(--font-body), sans-serif;
+  --font-display: var(--font-display), sans-serif;
+  
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-background);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.04em;
+}
+
+@layer utilities {
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Glassmorphism utility — Light frosted glass */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(196, 205, 216, 0.4);
+}
+
+/* Dark glass for dark sections (hero, footer) */
+.glass-dark {
+  background: rgba(13, 27, 42, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(74, 139, 194, 0.15);
+}
+
+/* Primary CTA Button gradient — Steel blue metallic */
+.bg-primary-gradient {
+  background: linear-gradient(135deg, #3D9AD6 0%, #2B6EA8 50%, #1F5B8F 100%);
+}
+
+/* Cyan glow utilities */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(43, 110, 168, 0.15), 0 0 40px rgba(61, 154, 214, 0.08);
+}
+
+.glow-primary-hover:hover {
+  box-shadow: 0 0 30px rgba(43, 110, 168, 0.25), 0 0 60px rgba(61, 154, 214, 0.12);
+}
+
+button {
+  transition: all 0.2s ease-in-out;
+}
