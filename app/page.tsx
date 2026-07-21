@@ -210,7 +210,7 @@ export default function Home() {
       {/* Parallax Divider 2 */}
       <section
         className="w-full h-[60vh] min-h-[500px] bg-fixed bg-center bg-cover bg-no-repeat relative flex items-center justify-center"
-        style={{ backgroundImage: "url('/images/parallax-hatchback.png')" }}
+        style={{ backgroundImage: "url('/images/parallax-hatchback1.png')" }}
       >
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
         <div className="relative z-10 text-center px-4 max-w-3xl">
