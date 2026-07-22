@@ -65,11 +65,8 @@ const modelCPro: EVModel = {
   category: 'Hatchback',
   comingSoon: false,
   colors: [
-    { name: 'Red', hex: '#C41E3A', image: '/images/models/henrey-red.png' },
-    { name: 'Gray', hex: '#C0C0C0', image: '/images/models/henrey-gray.png' },
-    { name: 'Black', hex: '#1A1A1A', image: '/images/models/henrey-black.png' },
-    { name: 'White', hex: '#F0F0EC', image: '/images/models/henrey-white.png' },
-    { name: 'Green', hex: '#B5D89B', image: '/images/models/henrey-green.png' },
+    { name: 'Red', hex: '#C41E3A', image: '/images/models/model-c-pro-red.png' },
+    { name: 'White', hex: '#F0F0EC', image: '/images/models/model-c-pro-white.png' },
   ],
   features: [
     'Fast Charging (36 min)',
@@ -83,7 +80,7 @@ const modelCPro: EVModel = {
     'Driver Airbag',
     'Alloy Wheels',
   ],
-  image: '/images/models/henrey-red.png',
+  image: '/images/models/model-c-pro-red.png',
 };
 
 const modelD: EVModel = {
@@ -100,11 +97,8 @@ const modelD: EVModel = {
   category: 'Hatchback',
   comingSoon: false,
   colors: [
-    { name: 'Red', hex: '#C41E3A', image: '/images/models/henrey-red.png' },
-    { name: 'Gray', hex: '#C0C0C0', image: '/images/models/henrey-gray.png' },
-    { name: 'Black', hex: '#1A1A1A', image: '/images/models/henrey-black.png' },
-    { name: 'White', hex: '#F0F0EC', image: '/images/models/henrey-white.png' },
-    { name: 'Green', hex: '#B5D89B', image: '/images/models/henrey-green.png' },
+    { name: 'Red', hex: '#C41E3A', image: '/images/models/model-d-red.png' },
+    { name: 'White', hex: '#F0F0EC', image: '/images/models/model-d-white.png' },
   ],
   features: [
     'EPS Power Steering',
@@ -116,7 +110,7 @@ const modelD: EVModel = {
     'Remote Key',
     'Halogen Headlights',
   ],
-  image: '/images/models/henrey-red.png',
+  image: '/images/models/model-d-red.png',
 };
 
 const modelDPro: EVModel = {

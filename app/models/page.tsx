@@ -21,7 +21,7 @@ export default function ModelsLandingPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Link href="/models/hatchbacks" className="group relative h-[400px] overflow-hidden rounded-2xl flex items-end justify-center pb-12 cursor-pointer shadow-md border border-outline-variant/20">
             <div className="absolute inset-0 bg-surface-container-lowest transition-transform duration-700 group-hover:scale-105">
-              <Image src="/images/models/hero-nano-gray.png" alt="Hatchbacks" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" />
+              <Image src="/images/models/model-c-pro-red.png" alt="Hatchbacks" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" />
             </div>
             <div className="absolute inset-0 bg-linear-to-t "></div>
             <div className="relative z-10 text-center">
