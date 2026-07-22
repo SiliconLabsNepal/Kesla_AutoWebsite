@@ -16,18 +16,18 @@ const InstagramIcon = ({ size = 18 }) => (
   </svg>
 );
 
-const TwitterIcon = ({ size = 18 }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-  </svg>
-);
+// const TwitterIcon = ({ size = 18 }) => (
+//   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+//     <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+//   </svg>
+// );
 
-const YoutubeIcon = ({ size = 18 }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
-  </svg>
-);
+// const YoutubeIcon = ({ size = 18 }) => (
+//   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+//     <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+//     <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+//   </svg>
+// );
 
 export const Footer = () => {
   return (
@@ -60,22 +60,22 @@ export const Footer = () => {
             <a href="https://www.instagram.com/keslaautonepal/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors text-on-surface-variant">
               <InstagramIcon size={18} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors text-on-surface-variant">
+            {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors text-on-surface-variant">
               <TwitterIcon size={18} />
             </a>
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors text-on-surface-variant">
               <YoutubeIcon size={18} />
-            </a>
+            </a> */}
           </div>
         </div>
 
         <div>
           <h4 className="text-white font-display font-bold uppercase tracking-wider mb-6 text-sm">Vehicles</h4>
           <ul className="space-y-4 text-on-surface-variant">
-            <li><Link href="/models/m31-flatbed" className="hover:text-primary transition-colors">Chufeng M31</Link></li>
+            <li><Link href="/models/model-d" className="hover:text-primary transition-colors">Model D</Link></li>
             <li><Link href="/models/model-c-pro" className="hover:text-primary transition-colors">Model C Pro</Link></li>
-            <li><Link href="/models/bus-350e" className="hover:text-primary transition-colors">Passenger Bus 350E</Link></li>
-            <li><Link href="/models/slk6540bev" className="hover:text-primary transition-colors">SLK6540BEV</Link></li>
+            {/* <li><Link href="/models/bus-350e" className="hover:text-primary transition-colors">Passenger Bus 350E</Link></li>
+            <li><Link href="/models/slk6540bev" className="hover:text-primary transition-colors">SLK6540BEV</Link></li> */}
             <li><Link href="/models" className="hover:text-primary transition-colors">All Models</Link></li>
           </ul>
         </div>

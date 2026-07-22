@@ -27,6 +27,7 @@ export default function PickupsPage() {
           subtitle="Heavy-duty electric trucks built for Nepal's terrain"
           icon={Truck}
           models={pickups}
+          showComingSoonOverlay
         />
       </div>
     </div>

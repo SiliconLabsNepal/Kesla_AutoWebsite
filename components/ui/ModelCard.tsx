@@ -180,7 +180,7 @@ function PhotoLightbox({
 /* ────────────────────────────────────────────
    Model Card
    ──────────────────────────────────────────── */
-export function ModelCard({ model }: { model: EVModel }) {
+export function ModelCard({ model, showComingSoonOverlay = false }: { model: EVModel; showComingSoonOverlay?: boolean }) {
   const isComingSoon = model.comingSoon;
   const [activeColor, setActiveColor] = useState(model.colors[0] || null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -195,7 +195,7 @@ export function ModelCard({ model }: { model: EVModel }) {
           }`}
       >
         {/* Coming Soon Overlay */}
-        {isComingSoon && (
+        {(isComingSoon || showComingSoonOverlay) && (
           <div className="absolute inset-0 z-30 bg-background/40 backdrop-blur-[2px] flex flex-col items-center justify-center pointer-events-none">
             <div className="bg-primary/10 border border-primary/30 rounded-full px-5 py-2 flex items-center gap-2">
               <Clock size={16} className="text-primary" />

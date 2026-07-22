@@ -47,7 +47,7 @@ const modelC: EVModel = {
     'TPMS',
     'Remote Key',
     'Driver Airbag',
-  ],
+  ],    
   image: '/images/models/model-c.png',
 };
 

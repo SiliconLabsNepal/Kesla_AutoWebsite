@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Car, Truck, Bus } from 'lucide-react';
+import { Car, Truck, Bus, Clock } from 'lucide-react';
 
 export default function ModelsLandingPage() {
   return (
@@ -37,6 +37,15 @@ export default function ModelsLandingPage() {
               <Image src="/images/models/m31-flatbed.png" alt="Pickups" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" />
             </div>
             <div className="absolute inset-0 bg-linear-to-t "></div>
+            {/* Coming Soon Overlay */}
+            <div className="absolute inset-0 z-20 bg-background/40 backdrop-blur-[2px] flex flex-col items-center justify-center pointer-events-none">
+              <div className="bg-primary/10 border border-primary/30 rounded-full px-5 py-2 flex items-center gap-2">
+                <Clock size={16} className="text-primary" />
+                <span className="text-primary font-display font-bold text-sm tracking-widest uppercase">
+                  Coming Soon
+                </span>
+              </div>
+            </div>
             <div className="relative z-10 text-center">
               <Truck className="w-10 h-10 text-white mx-auto mb-4 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all" />
               <h3 className="text-4xl font-display font-bold text-white uppercase tracking-widest group-hover:text-primary transition-colors drop-shadow-md">
@@ -50,6 +59,15 @@ export default function ModelsLandingPage() {
               <Image src="/images/models/slk6540bev.png" alt="Microvans" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" />
             </div>
             <div className="absolute inset-0 bg-linear-to-t "></div>
+            {/* Coming Soon Overlay */}
+            <div className="absolute inset-0 z-20 bg-background/40 backdrop-blur-[2px] flex flex-col items-center justify-center pointer-events-none">
+              <div className="bg-primary/10 border border-primary/30 rounded-full px-5 py-2 flex items-center gap-2">
+                <Clock size={16} className="text-primary" />
+                <span className="text-primary font-display font-bold text-sm tracking-widest uppercase">
+                  Coming Soon
+                </span>
+              </div>
+            </div>
             <div className="relative z-10 text-center">
               <Bus className="w-10 h-10 text-white mx-auto mb-4 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all" />
               <h3 className="text-4xl font-display font-bold text-white uppercase tracking-widest group-hover:text-primary transition-colors drop-shadow-md">

@@ -4,11 +4,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 
 const heroImages = [
-  { src: '/images/models/hero-nano-all.png', alt: 'henery EV white image', position: 'center 70%' },
-  { src: '/images/models/hero-nano-red.png', alt: 'MINOVA Cherry Red in vibrant city nightlife', position: 'center 58%' },
-  { src: '/images/models/hero-nano-green.png', alt: 'MINOVA Lemon Green driving through tea gardens', position: 'center 56%' },
-  { src: '/images/models/hero-nano-black.png', alt: 'MINOVA Ruby Black in premium showroom', position: 'center 63%' },
-  { src: '/images/models/hero-nano-gray.png', alt: 'MINOVA Future Gray at a futuristic charging station', position: 'center 60%' },
+  { src: '/images/models/hero-nano-red1.png', alt: 'MINOVA Cherry Red in vibrant city nightlife', position: 'center 58%' },
+  { src: '/images/models/hero-nano-red2.png', alt: 'MINOVA Lemon Green driving through tea gardens', position: 'center 56%' },
+  { src: '/images/models/hero-nano-white.png', alt: 'MINOVA Ruby Black in premium showroom', position: 'center 63%' },
+  { src: '/images/models/hero-nano-white2.png', alt: 'MINOVA Future Gray at a futuristic charging station', position: 'center 60%' },
+  { src: '/images/models/hero-nano-red3.png', alt: 'henery EV white image', position: 'center 70%' },
   { src: '/images/models/hero-nano-logo.png', alt: 'MINOVA Logo', position: 'center' }
 ];
 

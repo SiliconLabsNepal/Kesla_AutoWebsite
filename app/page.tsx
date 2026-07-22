@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { ArrowRight, Zap, Shield, Award } from 'lucide-react';
+import { ArrowRight, Zap, Shield, Award, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { HeroCarousel } from '@/components/ui/HeroCarousel';
@@ -28,7 +28,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <a href="/models/hatchbacks" className="group relative h-[400px] overflow-hidden rounded-2xl flex items-end justify-center pb-12 cursor-pointer shadow-md border border-outline-variant/20">
               <div className="absolute inset-0 bg-surface-container-lowest transition-transform duration-700 group-hover:scale-105">
-                <Image src="/images/models/hero-nano-gray.png" alt="Hatchbacks" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" priority />
+                <Image src="/images/models/hero-nano-redlogo.png" alt="Hatchbacks" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" priority />
               </div>
               <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent"></div>
               <h3 className="relative z-10 text-4xl font-display font-bold text-on-background uppercase tracking-widest group-hover:text-primary transition-colors">
@@ -41,6 +41,15 @@ export default function Home() {
                 <Image src="/images/models/m31-flatbed.png" alt="Pickups" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" priority />
               </div>
               <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent"></div>
+              {/* Coming Soon Overlay */}
+              <div className="absolute inset-0 z-20 bg-background/40 backdrop-blur-[2px] flex flex-col items-center justify-center pointer-events-none">
+                <div className="bg-primary/10 border border-primary/30 rounded-full px-5 py-2 flex items-center gap-2">
+                  <Clock size={16} className="text-primary" />
+                  <span className="text-primary font-display font-bold text-sm tracking-widest uppercase">
+                    Coming Soon
+                  </span>
+                </div>
+              </div>
               <h3 className="relative z-10 text-4xl font-display font-bold text-on-background uppercase tracking-widest group-hover:text-primary transition-colors">
                 Pickups
               </h3>
@@ -51,6 +60,15 @@ export default function Home() {
                 <Image src="/images/models/slk6540bev.png" alt="Microvans" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" priority />
               </div>
               <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent"></div>
+              {/* Coming Soon Overlay */}
+              <div className="absolute inset-0 z-20 bg-background/40 backdrop-blur-[2px] flex flex-col items-center justify-center pointer-events-none">
+                <div className="bg-primary/10 border border-primary/30 rounded-full px-5 py-2 flex items-center gap-2">
+                  <Clock size={16} className="text-primary" />
+                  <span className="text-primary font-display font-bold text-sm tracking-widest uppercase">
+                    Coming Soon
+                  </span>
+                </div>
+              </div>
               <h3 className="relative z-10 text-4xl font-display font-bold text-on-background uppercase tracking-widest group-hover:text-primary transition-colors">
                 Microvans
               </h3>
@@ -82,7 +100,7 @@ export default function Home() {
       </section>
 
       {/* Parallax Divider 1 */}
-      <section
+      {/* <section
         className="w-full h-[60vh] min-h-[500px] bg-fixed bg-center bg-cover bg-no-repeat relative flex items-center justify-center"
         style={{ backgroundImage: "url('/images/parallax-pickup.png')" }}
       >
@@ -95,7 +113,7 @@ export default function Home() {
             The Chufeng M31 delivers unparalleled payload capacity and electric efficiency.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* 2. Featured Models */}
       <section className="py-24 bg-surface-container-lowest">
@@ -116,7 +134,17 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredModels.map((model) => (
-              <Card key={model.id} hoverable className="p-0 flex flex-col group cursor-pointer bg-surface overflow-hidden shadow-sm border border-outline-variant/20" >
+              <Card key={model.id} hoverable className="p-0 flex flex-col group cursor-pointer bg-surface overflow-hidden shadow-sm border border-outline-variant/20 relative" >
+                {model.category === 'Pickup' && (
+                  <div className="absolute inset-0 z-30 bg-background/40 backdrop-blur-[2px] flex flex-col items-center justify-center pointer-events-none">
+                    <div className="bg-primary/10 border border-primary/30 rounded-full px-5 py-2 flex items-center gap-2">
+                      <Clock size={16} className="text-primary" />
+                      <span className="text-primary font-display font-bold text-sm tracking-widest uppercase">
+                        Coming Soon
+                      </span>
+                    </div>
+                  </div>
+                )}
                 {/* White image panel */}
                 <div className="w-full h-48 bg-white relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
                   <Image src={model.image} alt={model.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover p-4" />
@@ -170,12 +198,12 @@ export default function Home() {
               Chufeng M31
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-on-background mb-6 uppercase tracking-tighter leading-tight">
-              Nepal&rsquo;s Exclusive <br />Light Truck Dealer
+              Nepal&rsquo;s Exclusive <br />Henrey Car's EV Dealer
             </h2>
             <p className="text-on-surface-variant font-body text-lg mb-8">
               Kesla Auto Pvt. Ltd. is the sole entity in Nepal authorized to market and sell the
-              <strong className="text-on-background"> Chufeng M31 1.5-ton light truck pickup</strong>.
-              Built for Nepal&rsquo;s terrain — from the valley floor to highland routes — the M31 delivers rugged reliability
+              <strong className="text-on-background"> Henrey EV car in Nepal </strong>.
+              Built for Nepal&rsquo;s terrain- the Model C PRO and Model D delivers rugged reliability
               for businesses and individuals alike.
             </p>
 
@@ -194,7 +222,7 @@ export default function Home() {
                   <Zap className="text-primary w-6 h-6" />
                 </div>
                 <div>
-                  <h5 className="text-on-background font-display font-bold mb-1">Multi-Terrain</h5>
+                  {/* <h5 className="text-on-background font-display font-bold mb-1">Multi-Terrain</h5> */}
                   <p className="text-on-surface-variant text-sm">Engineered for Nepal&rsquo;s diverse road conditions.</p>
                 </div>
               </div>
@@ -227,13 +255,13 @@ export default function Home() {
       <section className="py-20 border-y border-outline-variant/10 bg-surface-container-low">
         <div className="container grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-outline-variant/20">
           <div className="text-center px-4">
-            <h3 className="text-5xl font-display font-bold text-primary mb-2">8</h3>
+            <h3 className="text-5xl font-display font-bold text-primary mb-2">2</h3>
             <p className="text-on-surface-variant font-display text-sm uppercase tracking-widest">EV Models</p>
           </div>
-          <div className="text-center px-4">
+          {/* <div className="text-center px-4">
             <h3 className="text-5xl font-display font-bold text-on-background mb-2">3</h3>
             <p className="text-on-surface-variant font-display text-sm uppercase tracking-widest">Vehicle Categories</p>
-          </div>
+          </div> */}
           <div className="text-center px-4">
             <h3 className="text-5xl font-display font-bold text-on-background mb-2">2026</h3>
             <p className="text-on-surface-variant font-display text-sm uppercase tracking-widest">Authorization Year</p>

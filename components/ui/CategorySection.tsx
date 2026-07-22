@@ -8,11 +8,13 @@ export function CategorySection({
   subtitle,
   icon: Icon,
   models: categoryModels,
+  showComingSoonOverlay = false,
 }: {
   title: string;
   subtitle: string;
   icon: React.ElementType;
   models: EVModel[];
+  showComingSoonOverlay?: boolean;
 }) {
   const available = categoryModels.filter((m) => !m.comingSoon);
   const comingSoon = categoryModels.filter((m) => m.comingSoon);
@@ -36,7 +38,7 @@ export function CategorySection({
       {available.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
           {available.map((model) => (
-            <ModelCard key={model.id} model={model} />
+            <ModelCard key={model.id} model={model} showComingSoonOverlay={showComingSoonOverlay} />
           ))}
         </div>
       )}
