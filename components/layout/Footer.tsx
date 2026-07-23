@@ -48,10 +48,10 @@ export const Footer = () => {
             </span>
           </Link>
           <p className="text-on-surface-variant font-body leading-relaxed mb-2">
-            Authorized exclusive dealer for Chufeng M31 in Nepal.
+            Authorized exclusive dealer for Henrey EV Cars in Nepal.
           </p>
           <p className="text-on-surface-variant/60 font-body text-xs mb-6">
-            Authorized by Xizang Xima Auto Automotive Technology Co., Ltd.
+            Authorized by HENAN HENREY AUTOMOBILE TECHNOLOGY CO. LTD.
           </p>
           <div className="flex gap-4">
             <a href="https://www.facebook.com/profile.php?id=61589583907266&sk=about" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors text-on-surface-variant">

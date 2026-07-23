@@ -124,7 +124,7 @@ export default function Home() {
                 Featured <span className="text-on-surface-variant">Models</span>
               </h2>
               <p className="text-on-surface-variant text-lg font-body max-w-xl">
-                From the sporty Model C Pro hatchback to the rugged M31 pickup &mdash; explore our available electric vehicles.
+                Sporty Model C Pro hatchback and Model D &mdash; explore our available electric vehicles.
               </p>
             </div>
             <Button variant="tertiary" href="/models" className="group">
@@ -190,12 +190,12 @@ export default function Home() {
                 <Award className="text-primary w-6 h-6" />
                 <h4 className="text-white font-display font-bold">Officially Authorized · April 2026</h4>
               </div>
-              <p className="text-on-surface-variant text-sm">Authorized by Xizang Xima Auto Automotive Technology Co., Ltd., International Sales Division.</p>
+              {/* <p className="text-on-surface-variant text-sm">Authorized by Xizang Xima Auto Automotive Technology Co., Ltd., International Sales Division.</p> */}
             </div>
           </div>
           <div>
             <div className="inline-block mb-4 px-4 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs uppercase tracking-widest font-semibold">
-              Chufeng M31
+              Henrey Ev Car
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-on-background mb-6 uppercase tracking-tighter leading-tight">
               Nepal&rsquo;s Exclusive <br />Henrey Car's EV Dealer
@@ -209,13 +209,13 @@ export default function Home() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
               <div className="flex gap-4">
-                <div className="bg-surface-container-high p-3 rounded-xl h-fit border border-outline-variant/20">
+                {/* <div className="bg-surface-container-high p-3 rounded-xl h-fit border border-outline-variant/20">
                   <Shield className="text-primary w-6 h-6" />
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                   <h5 className="text-on-background font-display font-bold mb-1">1.5 Ton Payload</h5>
                   <p className="text-on-surface-variant text-sm">Heavy-duty capacity for commercial use.</p>
-                </div>
+                </div> */}
               </div>
               <div className="flex gap-4">
                 <div className="bg-surface-container-high p-3 rounded-xl h-fit border border-outline-variant/20">
@@ -238,7 +238,7 @@ export default function Home() {
       {/* Parallax Divider 2 */}
       <section
         className="w-full h-[60vh] min-h-[500px] bg-fixed bg-center bg-cover bg-no-repeat relative flex items-center justify-center"
-        style={{ backgroundImage: "url('/images/parallax-hatchback1.png')" }}
+        style={{ backgroundImage: "url('/images/parallax-hatchback1.jpeg')" }}
       >
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
         <div className="relative z-10 text-center px-4 max-w-3xl">

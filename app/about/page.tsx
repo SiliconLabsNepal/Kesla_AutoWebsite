@@ -5,7 +5,7 @@ import { CheckCircle2, MapPin, Award, Calendar, Shield, FileText, Truck } from '
 export const metadata = {
   title: 'About Us | Kesla Auto Pvt. Ltd.',
   description:
-    'Kesla Auto Pvt. Ltd. — Government of Nepal registered agent for HENREY brand Electric Vehicles (Model C Pro, Model D) and Spare Parts, authorized by HENAN HENREY and XIZANG XIMA Automobile Technology Co., Ltd.',
+    'Kesla Auto Pvt. Ltd. — Government of Nepal registered agent for HENREY brand Electric Vehicles (Model C Pro, Model D) and Spare Parts, authorized by HENAN HENREY',
 };
 
 export default function AboutUs() {
@@ -41,8 +41,9 @@ export default function AboutUs() {
             Ministry of Industry, Commerce and Supplies, Government of Nepal, in accordance with the
             <strong className="text-on-background"> Nepal Agency Act, 2014 (1957)</strong>. The registration certificate
             (A.R. No. 2799) was issued on date 2082-12-18 BS, confirming Kesla Auto as the authorized agent for HENREY brand
-            electric vehicles manufactured by <strong className="text-on-background">HENAN HENREY AUTOMOBILE TECHNOLOGY CO. LTD.</strong> and
-            <strong className="text-on-background"> XIZANG XIMA AUTO AUTOMOBILE TECHNOLOGY CO. LTD.</strong>, both based in China.
+            electric vehicles manufactured by <strong className="text-on-background">HENAN HENREY AUTOMOBILE TECHNOLOGY CO. LTD.</strong> based on China.
+            {/* <strong className="text-on-background"> XIZANG XIMA AUTO AUTOMOBILE TECHNOLOGY CO. LTD.</strong>,
+             both based in China. */}
           </p>
           <p>
             Based at <strong className="text-on-background">Gatthaghar,Bhaktapur, Nepal</strong> and registered under
@@ -116,10 +117,10 @@ export default function AboutUs() {
           <div className="bg-surface-container p-8 rounded-xl border border-outline-variant/10 flex gap-4">
             <Truck className="text-primary w-8 h-8 mt-1 shrink-0" />
             <div>
-              <h3 className="text-on-background font-display font-bold text-lg mb-1 uppercase tracking-wide">Dual Manufacturer Partnership</h3>
+              <h3 className="text-on-background font-display font-bold text-lg mb-1 uppercase tracking-wide">Direct Manufacturer Partnership</h3>
               <p className="text-on-surface-variant text-sm">
-                Authorized by both <strong className="text-on-background">HENAN HENREY AUTOMOBILE TECHNOLOGY CO. LTD.</strong> and
-                <strong className="text-on-background"> XIZANG XIMA AUTO AUTOMOBILE TECHNOLOGY CO. LTD.</strong> of China.
+                Authorized by both <strong className="text-on-background">HENAN HENREY AUTOMOBILE TECHNOLOGY CO. LTD.</strong> of China
+                {/* <strong className="text-on-background"> XIZANG XIMA AUTO AUTOMOBILE TECHNOLOGY CO. LTD.</strong> of China. */}
               </p>
             </div>
           </div>
@@ -148,8 +149,8 @@ export default function AboutUs() {
             <div>
               <h3 className="text-on-background font-display font-bold text-lg mb-1 uppercase tracking-wide">Manufacturers</h3>
               <p className="text-on-surface-variant text-sm">
-                <strong className="text-on-background">HENAN HENREY AUTOMOBILE TECHNOLOGY CO. LTD.</strong> &amp;
-                <strong className="text-on-background"> XIZANG XIMA AUTO AUTOMOBILE TECHNOLOGY CO. LTD.</strong><br />
+                <strong className="text-on-background">HENAN HENREY AUTOMOBILE TECHNOLOGY CO. LTD.</strong> <br />
+                {/* <strong className="text-on-background"> XIZANG XIMA AUTO AUTOMOBILE TECHNOLOGY CO. LTD.</strong><br /> */}
                 China-based manufacturers of HENREY brand electric vehicles and automotive technology.
               </p>
             </div>

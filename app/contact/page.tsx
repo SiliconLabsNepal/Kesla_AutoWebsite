@@ -21,7 +21,7 @@ export default function ContactUs() {
             Get in <span className="text-primary">Touch</span>
           </h1>
           <p className="text-center text-on-surface-variant font-body max-w-xl mx-auto">
-            Have questions about the Chufeng M31 or want to schedule a test drive?
+            Have questions about the Henrey Model C PRO and D, or want to schedule a test drive?
             Visit us at our showroom in Gathhaghar, Bhaktapur or reach out below.
           </p>
         </div>
