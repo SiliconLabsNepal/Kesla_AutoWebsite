@@ -251,27 +251,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Statistics Counter */}
-      <section className="py-20 border-y border-outline-variant/10 bg-surface-container-low">
-        <div className="container grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-outline-variant/20">
-          <div className="text-center px-4">
-            <h3 className="text-5xl font-display font-bold text-primary mb-2">2</h3>
-            <p className="text-on-surface-variant font-display text-sm uppercase tracking-widest">EV Models</p>
-          </div>
-          {/* <div className="text-center px-4">
-            <h3 className="text-5xl font-display font-bold text-on-background mb-2">3</h3>
-            <p className="text-on-surface-variant font-display text-sm uppercase tracking-widest">Vehicle Categories</p>
-          </div> */}
-          <div className="text-center px-4">
-            <h3 className="text-5xl font-display font-bold text-on-background mb-2">2026</h3>
-            <p className="text-on-surface-variant font-display text-sm uppercase tracking-widest">Authorization Year</p>
-          </div>
-          <div className="text-center px-4">
-            <h3 className="text-5xl font-display font-bold text-on-background mb-2">1st</h3>
-            <p className="text-on-surface-variant font-display text-sm uppercase tracking-widest">Exclusive Nepal Dealer</p>
-          </div>
-        </div>
-      </section>
+     
+{/* 4. Statistics Counter */}
+<section className="py-20 border-y border-outline-variant/10 bg-surface-container-low">
+  <div className="container grid grid-cols-1 sm:grid-cols-3 gap-8">
+    <div className="text-center px-4">
+      <h3 className="text-5xl font-display font-bold text-primary mb-2">2</h3>
+      <p className="text-on-surface-variant font-display text-sm uppercase tracking-widest">
+        EV Models
+      </p>
+    </div>
+
+    <div className="text-center px-4">
+      <h3 className="text-5xl font-display font-bold text-on-background mb-2">2026</h3>
+      <p className="text-on-surface-variant font-display text-sm uppercase tracking-widest">
+        Authorization Year
+      </p>
+    </div>
+
+    <div className="text-center px-4">
+      <h3 className="text-5xl font-display font-bold text-on-background mb-2">1st</h3>
+      <p className="text-on-surface-variant font-display text-sm uppercase tracking-widest">
+        Exclusive Nepal Dealer
+      </p>
+    </div>
+  </div>
+</section>
 
     </div>
   );
