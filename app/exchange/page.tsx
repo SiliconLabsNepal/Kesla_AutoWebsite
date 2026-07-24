@@ -72,11 +72,17 @@ export default function Exchange() {
               <div className="flex flex-col gap-2">
                 <label className="text-xs text-on-surface-variant uppercase tracking-widest font-display">Desired EV to Exchange</label>
                 <select className="bg-surface-container-lowest border border-outline-variant/20 py-3 px-4 rounded text-on-background focus:outline-none focus:border-primary" value={formData.desiredModelSlug} onChange={(e) => setFormData({ ...formData, desiredModelSlug: e.target.value })}>
-                  {availableModels.map((model) => (
-                    <option key={model.id} value={model.slug}>{model.name}</option>
-                  ))}
+
+                  {availableModels
+                    .filter((model) => model.slug !== "m31-flatbed")
+                    .map((model) => (
+                      <option key={model.id} value={model.slug}>
+                        {model.name}
+                      </option>
+                    ))}
                 </select>
               </div>
+
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                 <div className="flex flex-col gap-2">

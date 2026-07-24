@@ -17,9 +17,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: 'Kesla Auto Pvt. Ltd. | Authorized Dealer — Chufeng M31 Nepal',
+  title: 'Kesla Auto Pvt. Ltd. | Authorized Dealer —  HENREY brand Electric Vehicles in Nepal',
   description:
-    'Kesla Auto Pvt. Ltd. is the exclusive authorized dealer for Chufeng M31 1.5-ton light truck pickup in Nepal. Serving customers from Gathhaghar, Bhaktapur.',
+    'Kesla Auto Pvt. Ltd. is the exclusive authorized dealer for MODEL C PRO and MODEL D in Nepal. Serving customers from Gathhaghar, Bhaktapur.',
   keywords: [
     'Kesla Auto',
     'Kesla Motors',

@@ -109,7 +109,7 @@ export default function AboutUs() {
             <div>
               <h3 className="text-on-background font-display font-bold text-lg mb-1 uppercase tracking-wide">Authorized HENREY Agent</h3>
               <p className="text-on-surface-variant text-sm">
-                Government-registered agent for HENREY brand Electric Vehicles (Model C Pro &amp; Model D) and spare parts across Nepal,
+                Government-registered agent for HENREY Brand Electric Vehicles (Model C Pro &amp; Model D) and spare parts across Nepal,
                 certified by the Department of Commerce, Supplies and Consumer Protection.
               </p>
             </div>
@@ -151,10 +151,13 @@ export default function AboutUs() {
               <p className="text-on-surface-variant text-sm">
                 <strong className="text-on-background">HENAN HENREY AUTOMOBILE TECHNOLOGY CO. LTD.</strong> <br />
                 {/* <strong className="text-on-background"> XIZANG XIMA AUTO AUTOMOBILE TECHNOLOGY CO. LTD.</strong><br /> */}
-                China-based manufacturers of HENREY brand electric vehicles and automotive technology.
+                China-based manufacturers of HENREY Brand Electric Vehicles and Automotive Technology.
               </p>
             </div>
-          </div>
+          </div> 
+
+
+          
         </div>
 
         {/* Stats row */}
