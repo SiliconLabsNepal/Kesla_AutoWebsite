@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { models } from '@/data/models';
+import { hatchbacks } from '@/data/models';
 import { dealers } from '@/data/dealers';
 import { Button } from '@/components/ui/Button';
 import { submitTestDrive } from '@/lib/api';
@@ -27,7 +27,7 @@ export default function TestDrive() {
     setSubmitting(true);
     setError('');
     try {
-      const modelName = models.find((m) => m.id === formData.modelId)?.name || '';
+      const modelName = hatchbacks.find((m) => m.id === formData.modelId)?.name || '';
       await submitTestDrive({ ...formData, modelName });
       setStep(4);
     } catch (err) {
@@ -97,7 +97,7 @@ export default function TestDrive() {
                   <label className="text-xs text-on-surface-variant uppercase tracking-widest font-display">Choose Vehicle</label>
                   <select className="bg-surface-container-lowest border border-outline-variant/20 rounded-md px-4 py-3 text-on-background focus:outline-none focus:border-primary" value={formData.modelId} onChange={(e) => setFormData({...formData, modelId: e.target.value})}>
                     <option value="">Select a Model</option>
-                    {models.map(m => (
+                    {hatchbacks.map(m => (
                       <option key={m.id} value={m.id}>{m.name}</option>
                     ))}
                   </select>
