@@ -1,6 +1,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/Button';
 
+export const metadata = {
+  title: 'ePlatform 3.0 Technology | Kesla Auto Nepal',
+  description: 'Discover ePlatform 3.0, the highly integrated platform exclusively designed for pure electric vehicles. The cradle of the next generation of Electric Vehicles.',
+};
+
 export default function EPlatform() {
   return (
     <div className="w-full min-h-screen bg-surface pt-32 pb-24">

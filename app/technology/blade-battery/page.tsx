@@ -1,6 +1,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/Button';
 
+export const metadata = {
+  title: 'Blade Battery Technology | Kesla Auto Nepal',
+  description: 'Learn about the revolutionary Blade Battery technology featured in HENREY electric vehicles. Uncompromised security and peak performance perfectly balanced.',
+};
+
 export default function BladeBattery() {
   return (
     <div className="w-full min-h-screen bg-surface pt-32 pb-24">

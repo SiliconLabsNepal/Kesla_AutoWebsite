@@ -4,6 +4,33 @@ import { notFound } from 'next/navigation';
 import { models } from '@/data/models';
 import { Battery, Zap, Timer, Gauge, ShieldCheck, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import type { Metadata } from 'next';
+
+// Dynamic metadata per model
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const model = models.find((m) => m.slug === resolvedParams.slug);
+
+  if (!model) {
+    return { title: 'Model Not Found | Kesla Auto Nepal' };
+  }
+
+  const title = `HENREY ${model.name} — ${model.range} Range Electric ${model.category} | Kesla Auto Nepal`;
+  const description = `HENREY ${model.name}: ${model.range} range, ${model.power} power, ${model.battery}. ${model.comingSoon ? 'Coming soon' : 'Available now'} in Nepal. ${model.category === 'Pickup' ? `${model.payload} payload capacity.` : `${model.seats}-seater electric ${model.category.toLowerCase()}.`} Book a test drive at Kesla Auto, Gatthaghar, Bhaktapur.`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [{ url: model.image, width: 1200, height: 630, alt: `HENREY ${model.name} electric ${model.category.toLowerCase()} Nepal` }],
+    },
+    alternates: {
+      canonical: `https://keslaautonepal.com/models/${model.slug}`,
+    },
+  };
+}
 
 // For Next.js 15+ App Router, params is a Promise
 export default async function ModelDetail({ params }: { params: Promise<{ slug: string }> }) {
@@ -14,8 +41,38 @@ export default async function ModelDetail({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
+  // Car structured data for Google rich results
+  const carJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Car',
+    name: `HENREY ${model.name}`,
+    brand: { '@type': 'Brand', name: 'HENREY' },
+    model: model.name,
+    vehicleEngine: {
+      '@type': 'EngineSpecification',
+      fuelType: 'Electric',
+    },
+    fuelEfficiency: `${model.range} range`,
+    driveWheelConfiguration: 'AllWheelDriveConfiguration',
+    numberOfDoors: 4,
+    vehicleSeatingCapacity: model.seats,
+    bodyType: model.category,
+    description: `HENREY ${model.name} electric ${model.category.toLowerCase()} with ${model.range} range and ${model.power} power. Available in Nepal through Kesla Auto.`,
+    image: `https://keslaautonepal.com${model.image}`,
+    offers: {
+      '@type': 'Offer',
+      availability: model.comingSoon ? 'https://schema.org/PreOrder' : 'https://schema.org/InStock',
+      priceCurrency: 'NPR',
+      seller: { '@type': 'Organization', name: 'Kesla Auto Pvt. Ltd.' },
+    },
+  };
+
   return (
     <div className="w-full flex flex-col bg-surface min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(carJsonLd) }}
+      />
       {/* Detail Hero */}
       <section className="relative w-full h-[70vh] flex items-end pb-24 overflow-hidden border-b border-outline-variant/20">
         <div className="absolute inset-0 z-0 bg-surface">

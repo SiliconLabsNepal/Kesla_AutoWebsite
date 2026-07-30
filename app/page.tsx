@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import { ArrowRight, Zap, Shield, Award, Clock } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, Zap, Award, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { HeroCarousel } from '@/components/ui/HeroCarousel';
@@ -9,8 +10,24 @@ import { availableModels } from '@/data/models';
 export default function Home() {
   const featuredModels = availableModels.slice(0, 3);
 
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Kesla Auto Nepal',
+    url: 'https://keslaautonepal.com',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://keslaautonepal.com/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string'
+    }
+  };
+
   return (
     <div className="w-full flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       {/* 1. Hero Section */}
       <section className="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         {/* Carousel Background */}
@@ -19,6 +36,7 @@ export default function Home() {
         </div>
 
         <div className="container relative z-20 text-center px-4">
+          <h1 className="sr-only">Kesla Auto — Nepal&apos;s Exclusive Authorized HENREY Electric Vehicle Dealer</h1>
         </div>
       </section>
 
@@ -26,19 +44,19 @@ export default function Home() {
       <section className="py-20 bg-surface">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/models/hatchbacks" className="group relative h-[400px] overflow-hidden rounded-2xl flex items-end justify-center pb-12 cursor-pointer shadow-md border border-outline-variant/20">
+            <Link href="/models/hatchbacks" className="group relative h-[400px] overflow-hidden rounded-2xl flex items-end justify-center pb-12 cursor-pointer shadow-md border border-outline-variant/20">
               <div className="absolute inset-0 bg-surface-container-lowest transition-transform duration-700 group-hover:scale-105">
-                <Image src="/images/models/hero-nano-redlogo.png" alt="Hatchbacks" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" priority />
+                <Image src="/images/models/hero-nano-redlogo.png" alt="HENREY electric hatchback cars available in Nepal — Model C Pro and Model D" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" priority />
               </div>
               <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent"></div>
               <h3 className="relative z-10 text-4xl font-display font-bold text-on-background uppercase tracking-widest group-hover:text-primary transition-colors">
                 Hatchbacks
               </h3>
-            </a>
+            </Link>
 
-            <a href="/models/pickups" className="group relative h-[400px] overflow-hidden rounded-2xl flex items-end justify-center pb-12 cursor-pointer shadow-md border border-outline-variant/20">
+            <Link href="/models/pickups" className="group relative h-[400px] overflow-hidden rounded-2xl flex items-end justify-center pb-12 cursor-pointer shadow-md border border-outline-variant/20">
               <div className="absolute inset-0 bg-surface-container-lowest transition-transform duration-700 group-hover:scale-105">
-                <Image src="/images/models/m31-flatbed.png" alt="Pickups" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" priority />
+                <Image src="/images/models/m31-flatbed.png" alt="HENREY electric pickup truck Chufeng M31 — coming soon to Nepal" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" priority />
               </div>
               <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent"></div>
               {/* Coming Soon Overlay */}
@@ -53,11 +71,11 @@ export default function Home() {
               <h3 className="relative z-10 text-4xl font-display font-bold text-on-background uppercase tracking-widest group-hover:text-primary transition-colors">
                 Pickups
               </h3>
-            </a>
+            </Link>
 
-            <a href="/models/microvans" className="group relative h-[400px] overflow-hidden rounded-2xl flex items-end justify-center pb-12 cursor-pointer shadow-md border border-outline-variant/20">
+            <Link href="/models/microvans" className="group relative h-[400px] overflow-hidden rounded-2xl flex items-end justify-center pb-12 cursor-pointer shadow-md border border-outline-variant/20">
               <div className="absolute inset-0 bg-surface-container-lowest transition-transform duration-700 group-hover:scale-105">
-                <Image src="/images/models/slk6540bev.png" alt="Microvans" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" priority />
+                <Image src="/images/models/slk6540bev.png" alt="HENREY electric microvan and passenger bus — coming soon to Nepal" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-80" priority />
               </div>
               <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent"></div>
               {/* Coming Soon Overlay */}
@@ -72,7 +90,7 @@ export default function Home() {
               <h3 className="relative z-10 text-4xl font-display font-bold text-on-background uppercase tracking-widest group-hover:text-primary transition-colors">
                 Microvans
               </h3>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -116,7 +134,7 @@ export default function Home() {
       </section> */}
 
       {/* 2. Featured Models */}
-      <section className="py-24 bg-surface-container-lowest">
+      <section id="models" className="py-24 bg-surface-container-lowest">
         <div className="container">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
@@ -183,7 +201,7 @@ export default function Home() {
       <section className="py-24 bg-surface">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative h-[500px] rounded-2xl overflow-hidden bg-surface-container border border-outline-variant/15 p-8 flex items-end group">
-            <Image src="/images/models/tech-bg.jpg" alt="Kesla Auto Showroom" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700" />
+            <Image src="/images/models/tech-bg.jpg" alt="Kesla Auto authorized HENREY EV showroom in Gatthaghar Bhaktapur Nepal" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,var(--tw-gradient-stops))] from-primary/10 via-background/60 to-background/95 z-0"></div>
             <div className="relative z-10 glass p-6 rounded-xl w-full">
               <div className="flex items-center gap-3 mb-2">
@@ -198,7 +216,7 @@ export default function Home() {
               Henrey Ev Car
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-on-background mb-6 uppercase tracking-tighter leading-tight">
-              Nepal&rsquo;s Exclusive <br />Henrey Car's EV Dealer
+              Nepal&rsquo;s Exclusive <br />Henrey Car&apos;s EV Dealer
             </h2>
             <p className="text-on-surface-variant font-body text-lg mb-8">
               Kesla Auto Pvt. Ltd. is the sole entity in Nepal authorized to market and sell the

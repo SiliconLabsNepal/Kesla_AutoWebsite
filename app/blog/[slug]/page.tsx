@@ -3,6 +3,34 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { blogs } from '@/data/blogs';
 import { Button } from '@/components/ui/Button';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = blogs.find((b) => b.slug === slug);
+  if (!post) return { title: 'Blog Post Not Found | Kesla Auto' };
+
+  return {
+    title: `${post.title} | Kesla Auto Nepal`,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      images: [{ url: post.image, width: 1200, height: 630, alt: post.title }],
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author],
+    },
+    alternates: {
+      canonical: `https://keslaautonepal.com/blog/${post.slug}`,
+    },
+  };
+}
+
+export function generateStaticParams() {
+  return blogs.map((post) => ({ slug: post.slug }));
+}
+
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
@@ -12,8 +40,29 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     notFound();
   }
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    image: `https://keslaautonepal.com${post.image}`,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: post.author
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Kesla Auto Nepal'
+    },
+    description: post.excerpt
+  };
+
   return (
     <div className="w-full min-h-screen bg-surface pt-32 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="container max-w-3xl mx-auto">
         <Button variant="tertiary" href="/blog" className="mb-8 p-0 text-sm">&larr; Back to News</Button>
         

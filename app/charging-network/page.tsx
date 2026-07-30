@@ -4,6 +4,21 @@ import { Button } from '@/components/ui/Button';
 import { Zap, MapPin, Phone, Activity } from 'lucide-react';
 import { LocatorMap } from '@/components/ui/LocatorMap';
 
+export const metadata = {
+  title: 'EV Charging Network Nepal — Charging Stations | Kesla Auto',
+  description:
+    'Find HENREY EV charging stations across Nepal. Fast and slow charging locations, charging times, and network coverage for Model C Pro and Model D electric cars.',
+  alternates: {
+    canonical: 'https://keslaautonepal.com/charging-network',
+  },
+  openGraph: {
+    title: 'EV Charging Network Nepal | Kesla Auto',
+    description: 'Find HENREY EV charging stations across Nepal. Fast and slow charging locations, charging times, and network coverage.',
+    url: 'https://keslaautonepal.com/charging-network',
+    images: [{ url: '/images/og-image.png', width: 1200, height: 630 }],
+  },
+};
+
 export default function ChargingNetwork() {
   return (
     <div className="w-full min-h-screen bg-surface pt-32 pb-24">

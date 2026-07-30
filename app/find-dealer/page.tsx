@@ -4,6 +4,21 @@ import { Button } from '@/components/ui/Button';
 import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 import { LocatorMap } from '@/components/ui/LocatorMap';
 
+export const metadata = {
+  title: 'Find a HENREY EV Dealer in Nepal — Showroom Locator | Kesla Auto',
+  description:
+    'Locate authorized HENREY electric vehicle dealers and showrooms in Nepal. Visit Kesla Auto at Gatthaghar, Bhaktapur for test drives, sales, and after-sales service.',
+  alternates: {
+    canonical: 'https://keslaautonepal.com/find-dealer',
+  },
+  openGraph: {
+    title: 'Find a HENREY EV Dealer in Nepal | Kesla Auto',
+    description: 'Locate authorized HENREY electric vehicle dealers and showrooms in Nepal. Visit Kesla Auto for test drives, sales, and after-sales service.',
+    url: 'https://keslaautonepal.com/find-dealer',
+    images: [{ url: '/images/og-image.png', width: 1200, height: 630 }],
+  },
+};
+
 export default function FindDealer() {
   return (
     <div className="w-full min-h-screen bg-surface pt-32 pb-24">

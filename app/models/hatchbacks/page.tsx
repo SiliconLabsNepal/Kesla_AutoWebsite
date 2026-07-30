@@ -4,6 +4,12 @@ import { hatchbacks } from '@/data/models';
 import { CategorySection } from '@/components/ui/CategorySection';
 import { CategoryTabs } from '@/components/ui/CategoryTabs';
 
+export const metadata = {
+  title: 'Electric Hatchbacks — Model C Pro & Model D | Kesla Auto Nepal',
+  description:
+    'Compare HENREY electric hatchbacks in Nepal. Model C Pro (285km range, fast charging) and Model D (220km range, entry-level). Affordable EVs for city driving.',
+};
+
 export default function HatchbacksPage() {
   return (
     <div className="w-full flex flex-col pt-32 pb-24 bg-surface min-h-screen">

@@ -3,9 +3,48 @@ import { models } from '@/data/models';
 import { Button } from '@/components/ui/Button';
 import { Download } from 'lucide-react';
 
+export const metadata = {
+  title: 'HENREY EV Price List Nepal 2026 — Model C Pro & Model D | Kesla Auto',
+  description:
+    'Official HENREY electric car prices in Nepal. Model C Pro and Model D pricing, specifications comparison, and financing options. Contact Kesla Auto for the best deals.',
+  alternates: {
+    canonical: 'https://keslaautonepal.com/price-list',
+  },
+  openGraph: {
+    title: 'HENREY EV Price List Nepal 2026 | Kesla Auto',
+    description: 'Official HENREY electric car prices in Nepal. Model C Pro and Model D pricing and specifications.',
+    url: 'https://keslaautonepal.com/price-list',
+    images: [{ url: '/images/og-image.png', width: 1200, height: 630 }],
+  },
+};
+
 export default function PriceList() {
+  const priceListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'HENREY EV Price List Nepal',
+    itemListElement: models.map((model, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Product',
+        name: `HENREY ${model.name}`,
+        image: `https://keslaautonepal.com${model.image}`,
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'NPR',
+          availability: model.comingSoon ? 'https://schema.org/PreOrder' : 'https://schema.org/InStock',
+        }
+      }
+    }))
+  };
+
   return (
     <div className="w-full min-h-screen bg-surface pt-32 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(priceListJsonLd) }}
+      />
       <div className="container max-w-5xl">
         
         <div className="mb-12 border-b border-outline-variant/20 pb-8 flex flex-col sm:flex-row justify-between items-end gap-6">

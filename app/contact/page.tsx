@@ -5,12 +5,45 @@ import { ContactForm } from '@/components/forms/ContactForm';
 export const metadata = {
   title: 'Contact Us | Kesla Auto Pvt. Ltd.',
   description:
-    'Contact Kesla Auto Pvt. Ltd. — exclusive Chufeng M31 dealer in Nepal. Located at Gathhaghar, Bhaktapur.',
+    'Contact Kesla Auto Pvt. Ltd. — Nepal\'s exclusive authorized HENREY EV dealer. Located at Gatthaghar, Bhaktapur. Call, email, or visit us for test drives and inquiries.',
+  alternates: {
+    canonical: 'https://keslaautonepal.com/contact',
+  },
+  openGraph: {
+    title: 'Contact Us | Kesla Auto Pvt. Ltd.',
+    description: 'Contact Kesla Auto Pvt. Ltd. — Nepal\'s exclusive authorized HENREY EV dealer.',
+    url: 'https://keslaautonepal.com/contact',
+    images: [{ url: '/images/og-image.png', width: 1200, height: 630 }],
+  },
 };
 
 export default function ContactUs() {
+  const contactJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Kesla Auto',
+    description: 'Contact details for Kesla Auto Pvt. Ltd. in Bhaktapur, Nepal.',
+    url: 'https://keslaautonepal.com/contact',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'Kesla Auto Pvt. Ltd.',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+977-9851420820',
+        contactType: 'sales',
+        email: 'info@keslaautonepal.com',
+        areaServed: 'NP',
+        availableLanguage: ['en', 'ne']
+      }
+    }
+  };
+
   return (
     <div className="w-full min-h-screen bg-surface pt-32 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}
+      />
       <div className="container max-w-5xl mx-auto">
 
         <div className="text-center mb-12">

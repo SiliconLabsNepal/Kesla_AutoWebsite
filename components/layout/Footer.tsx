@@ -76,7 +76,7 @@ export const Footer = () => {
             <li><Link href="/models/model-c-pro" className="hover:text-primary transition-colors">Model C Pro</Link></li>
             {/* <li><Link href="/models/bus-350e" className="hover:text-primary transition-colors">Passenger Bus 350E</Link></li>
             <li><Link href="/models/slk6540bev" className="hover:text-primary transition-colors">SLK6540BEV</Link></li> */}
-            <li><Link href="/models" className="hover:text-primary transition-colors">All Models</Link></li>
+            <li><Link href="/#models" className="hover:text-primary transition-colors">All Models</Link></li>
           </ul>
         </div>
 

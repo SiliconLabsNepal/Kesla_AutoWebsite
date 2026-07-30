@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'Intelligence & Connectivity | Kesla Auto Nepal',
+  description: 'Experience the world\'s first adaptive rotating touchscreen and DiPilot ADAS system in HENREY electric vehicles.',
+};
+
 export default function HiTech() {
   return (
     <div className="w-full min-h-screen bg-surface pt-32 pb-24">

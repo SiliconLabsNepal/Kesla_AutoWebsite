@@ -44,7 +44,7 @@ export function ContactForm() {
     <div className="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/15">
       <h3 className="font-display font-bold text-on-background text-2xl mb-2">Send a Message</h3>
       <p className="text-on-surface-variant text-sm mb-6">
-        Inquire about the Chufeng M31, pricing, financing, or after-sales service.
+        Inquire about the HENREY cars, pricing, financing, or after-sales service.
       </p>
       <form onSubmit={submitForm} className="flex flex-col gap-4">
         <input

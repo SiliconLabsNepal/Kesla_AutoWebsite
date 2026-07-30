@@ -3,9 +3,36 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Car, Truck, Bus, Clock } from 'lucide-react';
 
+export const metadata = {
+  title: 'HENREY EV Models — Electric Cars Available in Nepal | Kesla Auto',
+  description:
+    'Explore the complete HENREY electric vehicle lineup in Nepal. Hatchbacks (Model C Pro, Model D), pickups, and microvans. Nepal\'s exclusive authorized EV dealer.',
+  alternates: {
+    canonical: 'https://keslaautonepal.com/models',
+  },
+  openGraph: {
+    title: 'HENREY EV Models | Kesla Auto',
+    description: 'Explore the complete HENREY electric vehicle lineup in Nepal. Hatchbacks, pickups, and microvans.',
+    url: 'https://keslaautonepal.com/models',
+    images: [{ url: '/images/og-image.png', width: 1200, height: 630 }],
+  },
+};
+
 export default function ModelsLandingPage() {
+  const collectionJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'HENREY EV Models',
+    description: 'Explore the complete HENREY electric vehicle lineup in Nepal.',
+    url: 'https://keslaautonepal.com/models',
+  };
+
   return (
     <div className="w-full flex flex-col pt-32 pb-24 bg-surface min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
       <div className="container">
         {/* Header */}
         <div className="mb-16 border-b border-outline-variant/20 pb-8 text-center max-w-3xl mx-auto">

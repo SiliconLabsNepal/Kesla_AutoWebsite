@@ -6,11 +6,36 @@ export const metadata = {
   title: 'About Us | Kesla Auto Pvt. Ltd.',
   description:
     'Kesla Auto Pvt. Ltd. — Government of Nepal registered agent for HENREY brand Electric Vehicles (Model C Pro, Model D) and Spare Parts, authorized by HENAN HENREY',
+  alternates: {
+    canonical: 'https://keslaautonepal.com/about',
+  },
+  openGraph: {
+    title: 'About Us | Kesla Auto Pvt. Ltd.',
+    description: 'Kesla Auto Pvt. Ltd. — Government of Nepal registered agent for HENREY brand Electric Vehicles in Nepal.',
+    url: 'https://keslaautonepal.com/about',
+    images: [{ url: '/images/og-image.png', width: 1200, height: 630 }],
+  },
 };
 
 export default function AboutUs() {
+  const aboutJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About Kesla Auto Pvt. Ltd.',
+    description: 'Kesla Auto Pvt. Ltd. is a Government of Nepal registered agent for the sale and distribution of HENREY brand Electric Vehicles.',
+    url: 'https://keslaautonepal.com/about',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Kesla Auto Pvt. Ltd.'
+    }
+  };
+
   return (
     <div className="w-full min-h-screen bg-surface pt-32 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
       <div className="container max-w-4xl mx-auto">
 
         {/* Hero heading */}
