@@ -139,9 +139,9 @@ export default async function ModelDetail({ params }: { params: Promise<{ slug: 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Battery Details */}
             <div>
-              <h3 className="text-3xl font-display font-bold text-on-background uppercase tracking-wider mb-6 border-b border-outline-variant/20 pb-4">
+              <h2 className="text-3xl font-display font-bold text-on-background uppercase tracking-wider mb-6 border-b border-outline-variant/20 pb-4">
                 Architecture & Power
-              </h3>
+              </h2>
               <ul className="space-y-6 text-lg font-body text-on-surface-variant">
                 <li className="flex justify-between items-center border-b border-outline-variant/10 pb-4">
                   <span>Battery Type</span>
@@ -156,9 +156,9 @@ export default async function ModelDetail({ params }: { params: Promise<{ slug: 
 
             {/* Smart Features */}
             <div>
-              <h3 className="text-3xl font-display font-bold text-on-background uppercase tracking-wider mb-6 border-b border-outline-variant/20 pb-4">
+              <h2 className="text-3xl font-display font-bold text-on-background uppercase tracking-wider mb-6 border-b border-outline-variant/20 pb-4">
                 Hi-Tech Features
-              </h3>
+              </h2>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {model.features.map((feature, idx) => (
                   <li key={idx} className="bg-surface-container-low p-4 rounded-xl border border-outline-variant/15 text-on-background font-display tracking-wide flex items-center gap-3">

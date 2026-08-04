@@ -18,6 +18,6 @@ export const dealers: Dealer[] = [
     type: 'Authorized Showroom, Sales & Service',
     phone: '9851420820',
     email: 'info@keslaautonepal.com',
-    coordinates: { lat: 27.6741619, lng: 85.3761929 },
+    coordinates: { lat: 27.673967, lng: 85.376960 },
   },
 ];

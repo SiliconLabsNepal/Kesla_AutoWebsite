@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Intelligence & Connectivity | Kesla Auto Nepal',
@@ -18,13 +19,13 @@ export default function HiTech() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
           <div className="bg-surface-container p-8 rounded-2xl border border-outline-variant/15">
-            <h3 className="text-2xl font-display font-bold text-on-background mb-4">Cockpit Rotational Screen</h3>
+            <h2 className="text-2xl font-display font-bold text-on-background mb-4">Cockpit Rotational Screen</h2>
             <p className="text-on-surface-variant font-body leading-relaxed">
-              Experience the world's first 15.6" adaptive rotating touchscreen. Our central hub automatically pivots to landscape or portrait mode depending on your application, seamlessly integrating with our intelligent voice assistant to control climate, media, and navigation completely hands-free.
+              Experience the world's first 15.6" adaptive rotating touchscreen in our <Link href="/models" className="text-primary hover:underline font-bold">HENREY EVs</Link>. Our central hub automatically pivots to landscape or portrait mode depending on your application, seamlessly integrating with our intelligent voice assistant to control climate, media, and navigation completely hands-free.
             </p>
           </div>
           <div className="bg-surface-container p-8 rounded-2xl border border-outline-variant/15">
-            <h3 className="text-2xl font-display font-bold text-on-background mb-4">DiPilot ADAS System</h3>
+            <h2 className="text-2xl font-display font-bold text-on-background mb-4">DiPilot ADAS System</h2>
             <p className="text-on-surface-variant font-body leading-relaxed">
               Our Advanced Driver Assistance System uses an array of millimeter-wave radars and high-definition cameras to provide comprehensive 360-degree monitoring. Features include adaptive cruise control, lane centering, automatic emergency braking, and autonomous parking.
             </p>

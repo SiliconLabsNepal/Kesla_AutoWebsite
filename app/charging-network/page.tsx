@@ -37,6 +37,7 @@ export default function ChargingNetwork() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="flex flex-col gap-4 overflow-y-auto max-h-[600px] pr-2 lg:order-1 order-2">
+            <h2 className="text-2xl font-display font-bold text-on-background mb-2">Station Locations</h2>
             {chargingStations.map((station) => (
               <div key={station.id} className="bg-surface-container-low p-6 rounded-xl border border-outline-variant/15 hover:bg-surface-container transition-colors group cursor-pointer relative overflow-hidden">
                 <div className={`absolute top-0 right-0 w-2 h-full ${station.type === 'DC Fast' ? 'bg-primary' : 'bg-blue-400'}`}></div>

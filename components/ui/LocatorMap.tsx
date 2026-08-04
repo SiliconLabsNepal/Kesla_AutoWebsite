@@ -21,7 +21,7 @@ interface LocatorMapProps {
 
 export function LocatorMap({ 
   locations, 
-  defaultCenter = { lat: 27.7172, lng: 85.3240 }, // Default Kathmandu
+  defaultCenter = { lat: 27.673967, lng: 85.376960 }, // Default Kathmandu
   defaultZoom = 12,
   height = '600px'
 }: LocatorMapProps) {
@@ -83,4 +83,6 @@ export function LocatorMap({
       </APIProvider>
     </div>
   );
+ 
+
 }

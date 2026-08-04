@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 
 export const metadata = {
@@ -18,9 +19,9 @@ export default function EPlatform() {
         </p>
 
         <div className="text-left bg-surface-container-low p-8 md:p-12 rounded-2xl border border-outline-variant/15 flex flex-col gap-6 text-on-surface-variant font-body leading-relaxed text-lg mb-12">
-          <h3 className="text-on-background font-display font-bold text-2xl uppercase tracking-widest">Built for Intelligence</h3>
+          <h2 className="text-on-background font-display font-bold text-2xl uppercase tracking-widest">Built for Intelligence</h2>
           <p>
-            e-Platform 3.0 is a highly integrated platform exclusively designed for pure electric vehicles. It seamlessly integrates the Blade Battery into the vehicle's structural frame, significantly increasing rigidity and crash safety.
+            e-Platform 3.0 is a highly integrated platform exclusively designed for pure electric vehicles. It seamlessly integrates the <Link href="/technology/blade-battery" className="text-primary hover:underline font-bold">Blade Battery</Link> into the vehicle's structural frame, significantly increasing rigidity and crash safety.
           </p>
           <p>
             Featuring the world's first 8-in-1 electric powertrain, the overall system efficiency is drastically improved. This leads to longer range, faster charging times via high-voltage 800V architectures, and smoother driving dynamics.

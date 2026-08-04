@@ -18,6 +18,6 @@ export const chargingStations: ChargingStation[] = [
     power: 30,
     guns: 1,
     phone: '9851420820',
-    coordinates: { lat: 27.6741619, lng: 85.3761929 },
+    coordinates: { lat: 27.673967, lng: 85.376960 },
   }
 ];

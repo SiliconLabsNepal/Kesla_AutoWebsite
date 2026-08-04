@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 
 export const metadata = {
@@ -23,11 +24,12 @@ export default function BladeBattery() {
         </div>
 
         <div className="text-left bg-surface-container-low p-8 md:p-12 rounded-2xl border border-outline-variant/15 flex flex-col gap-6 text-on-surface-variant font-body leading-relaxed text-lg mb-12">
+          <h2 className="text-3xl font-display font-bold text-on-background uppercase tracking-tighter mb-2">Understanding Blade Technology</h2>
           <p>
             The Blade Battery represents a revolutionary approach to battery architecture. By arranging individual cells in an array and then inserting them into a battery pack like blades, the space utilization of the battery pack is increased by over 50% compared to conventional lithium iron phosphate block batteries.
           </p>
           <p>
-            Beyond energy density, its defining feature is safety. It successfully passed the nail penetration test without emitting smoke or catching fire, while the surface temperature only reached 30 to 60°C.
+            Beyond energy density, its defining feature is safety. It successfully passed the nail penetration test without emitting smoke or catching fire, while the surface temperature only reached 30 to 60°C. You can experience this technology in our <Link href="/models" className="text-primary hover:underline font-bold">HENREY electric vehicles</Link>.
           </p>
         </div>
       </div>

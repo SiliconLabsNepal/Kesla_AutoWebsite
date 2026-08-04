@@ -30,15 +30,22 @@ export default function FindDealer() {
               Find a <span className="text-primary">Dealer</span>
             </h1>
             <p className="text-on-surface-variant font-body text-lg max-w-xl">
-              Locate your nearest authorized VoltDrive dealership for sales, service, and test drives.
+              Locate your nearest authorized HENREY dealership for sales, service, and test drives.
             </p>
           </div>
           <div>
-            <div className="flex gap-2 relative">
+            <div className="flex gap-2 relative mb-4">
               <input type="text" placeholder="Search by city or province..." className="bg-surface-container-low border border-outline-variant/20 rounded-md px-4 py-3 text-on-background placeholder-on-surface-variant/50 focus:outline-none focus:border-primary w-[300px]" />
               <Button variant="primary" className="px-6">Search</Button>
             </div>
+            <p className="text-sm text-on-surface-variant">
+              Can't find a dealer near you? <a href="/contact" className="text-primary hover:underline font-medium">Contact our head office</a>.
+            </p>
           </div>
+        </div>
+
+        <div className="mb-6 flex justify-between items-center">
+          <h2 className="text-3xl font-display font-bold text-on-background">Dealership Locations</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

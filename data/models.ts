@@ -67,6 +67,8 @@ const modelCPro: EVModel = {
   colors: [
     { name: 'Red', hex: '#C41E3A', image: '/images/models/model-c-pro-red.png' },
     { name: 'White', hex: '#F0F0EC', image: '/images/models/model-c-pro-white.png' },
+    { name: 'Green', hex: '#aec59d', image: '/images/models/model-c-pro-green.png' },
+    { name: 'Gray', hex: '#adadad', image: '/images/models/model-c-pro-grey.png' },
   ],
   features: [
     'Fast Charging (36 min)',
@@ -99,6 +101,8 @@ const modelD: EVModel = {
   colors: [
     { name: 'Red', hex: '#C41E3A', image: '/images/models/model-d-red.png' },
     { name: 'White', hex: '#F0F0EC', image: '/images/models/model-d-white.png' },
+    { name: 'Green', hex: '#aec59d', image: '/images/models/model-c-pro-green.png' },
+    { name: 'Gray', hex: '#adadad', image: '/images/models/model-c-pro-grey.png' },
   ],
   features: [
     'EPS Power Steering',

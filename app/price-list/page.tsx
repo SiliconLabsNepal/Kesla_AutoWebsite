@@ -61,6 +61,10 @@ export default function PriceList() {
           </Button>
         </div>
 
+        <div className="mt-8 mb-6">
+          <h2 className="text-3xl font-display font-bold text-on-background">Vehicle Pricing</h2>
+        </div>
+        
         <div className="bg-surface-container rounded-2xl border border-outline-variant/15 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left font-body">

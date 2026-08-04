@@ -59,10 +59,12 @@ export default function ContactUs() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+          
           {/* Contact Details */}
           <div className="flex flex-col gap-6">
+            <h2 className="text-3xl font-display font-bold text-on-background mb-4">Contact Information</h2>
+            
             <div className="bg-surface-container p-8 rounded-2xl border border-outline-variant/15 flex gap-4">
               <MapPin className="text-primary w-6 h-6 mt-1 shrink-0" />
               <div>
@@ -104,7 +106,10 @@ export default function ContactUs() {
           </div>
 
           {/* Contact Form */}
-          <ContactForm />
+          <div>
+            <h2 className="text-3xl font-display font-bold text-on-background mb-4">Send Us a Message</h2>
+            <ContactForm />
+          </div>
         </div>
 
       </div>

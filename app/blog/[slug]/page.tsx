@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogs } from '@/data/blogs';
 import { Button } from '@/components/ui/Button';
@@ -83,10 +84,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <div className="text-on-surface-variant font-body text-lg leading-relaxed flex flex-col gap-6">
           <p className="text-on-background font-medium text-xl border-l-4 border-primary pl-4">{post.excerpt}</p>
           <div className="mt-4">
+             <h2 className="text-3xl font-display font-bold text-on-background uppercase tracking-tighter mb-4">The Details</h2>
              {/* This would be a rich text render or dangerouslySetInnerHTML in production */}
              <p>{post.content}</p>
              <p className="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id sem et justo fringilla mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris varius id sem eget convallis.</p>
-             <p className="mt-4">Donec accumsan eros diam, id iaculis purus elementum eu. Phasellus et justo lorem. Nunc viverra, eros congue tincidunt dignissim, elit libero venenatis lacus, at elementum tellus sem feugiat diam.</p>
+             <p className="mt-4">Donec accumsan eros diam, id iaculis purus elementum eu. Phasellus et justo lorem. You can explore our <Link href="/models" className="text-primary hover:underline font-bold">EV lineup</Link> or book a test drive today.</p>
           </div>
         </div>
       </div>

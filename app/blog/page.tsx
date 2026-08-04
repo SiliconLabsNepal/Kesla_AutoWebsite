@@ -54,6 +54,10 @@ export default function BlogIndex() {
           Stay updated with Kesla Auto news, HENREY EV technology, and electric vehicle insights for Nepal.
         </p>
 
+        <div className="mt-8 mb-12">
+          <h2 className="text-3xl font-display font-bold text-on-background">Recent Articles</h2>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((post) => (
             <Card key={post.id} className="flex flex-col h-full bg-surface-container-low! hover:bg-surface-container-high! transition-colors">

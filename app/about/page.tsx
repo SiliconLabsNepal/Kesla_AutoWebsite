@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { CheckCircle2, MapPin, Award, Calendar, Shield, FileText, Truck } from 'lucide-react';
 
@@ -57,7 +58,7 @@ export default function AboutUs() {
             <strong className="text-on-background">Kesla Auto Pvt. Ltd.</strong> is a
             <strong className="text-primary"> Government of Nepal registered agent</strong> for the sale and distribution of
             <strong className="text-on-background"> HENREY brand Electric Vehicles</strong> — specifically the
-            <strong className="text-primary"> Model C Pro</strong> and <strong className="text-primary">Model D</strong> — along with genuine spare parts,
+            <Link href="/models/c-pro" className="text-primary hover:underline font-bold"> Model C Pro</Link> and <Link href="/models/d" className="text-primary hover:underline font-bold">Model D</Link> — along with genuine spare parts,
             throughout the territory of Nepal.
           </p>
           <p>
