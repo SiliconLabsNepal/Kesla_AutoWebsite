@@ -5,6 +5,7 @@ import { ArrowRight, Zap, Award, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { HeroCarousel } from '@/components/ui/HeroCarousel';
+import { BrochureModal } from '@/components/ui/BrochureModal';
 import { availableModels } from '@/data/models';
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
 
   return (
     <div className="w-full flex flex-col">
+      <BrochureModal />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
