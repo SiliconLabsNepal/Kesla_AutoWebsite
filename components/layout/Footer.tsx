@@ -54,7 +54,7 @@ export const Footer = () => {
             Authorized by HENAN HENREY AUTOMOBILE TECHNOLOGY CO. LTD.
           </p>
           <div className="flex gap-4">
-            <a href="https://www.facebook.com/profile.php?id=61589583907266&sk=about" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors text-on-surface-variant">
+            <a href="https://www.facebook.com/profile.php?id=61593394010996t" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors text-on-surface-variant">
               <FacebookIcon size={18} />
             </a>
             <a href="https://www.instagram.com/keslaautonepal/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors text-on-surface-variant">
